@@ -1,0 +1,22 @@
+:root {
+  --bg: #fbfaf6; --fg: #17181c; --muted: #5d6068; --line: #e4e2da; --accent: #c98a00;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #121317; --fg: #ececef; --muted: #a2a5ad; --line: #2a2c33; --accent: #ffc53d; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 64px; }
+a { color: var(--accent); text-underline-offset: 2px; }
+h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 8px; }
+h2 { font-size: 1.15rem; margin: 32px 0 6px; }
+p, li { max-width: 64ch; }
+.muted { color: var(--muted); }
+.hero { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 20px; }
+.hero img { width: 112px; height: 112px; border-radius: 50%; display: block; }
+.links { display: flex; gap: 10px; flex-wrap: wrap; padding: 0; list-style: none; margin: 20px 0; }
+.links a { display: inline-block; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; color: var(--fg); }
+.links a:hover { border-color: var(--accent); }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+footer a { color: var(--muted); }
